@@ -1,0 +1,22 @@
+<div
+  class="ma-memory__game-tile ma-memory__game-tile--{{ size }}"
+  (click)="onOpen()"
+>
+  <div
+    class="ma-memory__game-tile-inner"
+    [class.ma-memory__game-tile-inner--open]="
+      tile.status === memoryTileStatus.OPEN
+    "
+    [class.ma-memory__game-tile-inner--matched]="
+      tile.status === memoryTileStatus.MATCHED
+    "
+  >
+    <div class="ma-memory__game-tile-front"></div>
+    <div class="ma-memory__game-tile-back">
+      <fa-icon
+        [icon]="['fas', tile.icon]"
+        [size]="sizeInIcon"
+      ></fa-icon>
+    </div>
+  </div>
+</div>

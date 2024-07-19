@@ -1,0 +1,23 @@
+<div class="ma-memory">
+  <div class="ma-memory__header">
+    <ma-text text="memory" type="title" />
+    <div class="d-flex">
+      <ma-button style="margin-right: 20px" text="New Game" type="secondary" (click)="newGame()" />
+      <ma-button text="Restart" (click)="restart()" />
+    </div>
+  </div>
+
+  <div class="ma-memory__game">
+    <ma-memory-board
+      [difficulty]="difficulty"
+      [gameCounter]="gameCounter"
+      (gameFinished)="onGameFinish()"
+      (moves)="moves = moves + 1"
+    ></ma-memory-board>
+  </div>
+
+  <div class="ma-memory__footer">
+    <ma-stats label="Time" [value]="time * 1000 | date: 'mm:ss'"></ma-stats>
+    <ma-stats label="Moves" [value]="moves + ''"></ma-stats>
+  </div>
+</div>

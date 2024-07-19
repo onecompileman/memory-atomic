@@ -1,0 +1,72 @@
+.ma-memory {
+  &__game-tile {
+    perspective: 1000px;
+    width: 130px;
+    height: 130px;
+
+    margin: 10px;
+    cursor: pointer;
+    &-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.3s;
+      transform-style: preserve-3d;
+      &--open {
+        transform: rotateY(180deg);
+      }
+
+      &--matched {
+        transform: rotateY(180deg);
+        border: 2px solid green;
+        border-radius: 100%;
+      }
+    }
+
+    &-front {
+      background-color: #31485a;
+    }
+    &-back {
+      background-color: #bcceda;
+      transform: rotateY(180deg);
+    }
+
+    &-front,
+    &-back {
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 28px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden; /* Safari */
+      backface-visibility: hidden;
+    }
+    &--sm {
+      width: 80px;
+      height: 80px;
+      &-front,
+      &-back {
+        font-size: 36px;
+      }
+    }
+
+    &--md {
+      width: 130px;
+      height: 130px;
+    }
+
+    &--lg {
+      width: 180px;
+      height: 180px;
+
+      &-back {
+          font-size: 184px;
+      }
+    }
+  }
+}

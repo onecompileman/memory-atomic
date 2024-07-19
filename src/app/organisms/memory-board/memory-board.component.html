@@ -1,0 +1,3 @@
+<div class="ma-board">
+  <ma-memory-item *ngFor="let tile of tiles" [tile]="tile" [size]="tileSize" (open)="openTile(tile)"></ma-memory-item>
+</div>
