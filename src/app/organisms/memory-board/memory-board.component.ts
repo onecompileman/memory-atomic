@@ -140,7 +140,19 @@ export class MemoryBoardComponent implements OnInit, OnChanges {
       icon: 'star',
       status: MemoryTileStatus.CLOSED,
     },
-    
+
+    {
+      icon: 'heart',
+      status: MemoryTileStatus.CLOSED,
+    },
+    {
+      icon: 'bomb',
+      status: MemoryTileStatus.CLOSED,
+    },
+    {
+      icon: 'music',
+      status: MemoryTileStatus.CLOSED,
+    },
   ];
 
   tiles: MemoryTile[] = [];
